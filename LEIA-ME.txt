@@ -1,75 +1,30 @@
-ESSENZA DE SUMARA — CÓDIGO-FONTE
+ESSENZA DE SUMARA — CATÁLOGO ATUALIZADO
 
-Este pacote contém o site completo em HTML, CSS e JavaScript, com as imagens utilizadas. Não depende da hospedagem do ChatGPT para funcionar. Não precisa de Node.js, instalação de pacotes, compilação, PHP ou banco de dados.
+15 perfumes, incluindo os 12 nomes solicitados (Asad já existia) e os outros três produtos anteriores.
 
-1. O QUE HÁ NO PACOTE
+COMO PUBLICAR
+Extraia o ZIP. Envie o CONTEÚDO da pasta site para a raiz pública da hospedagem do seu domínio. index.html, style.css, app.js e todas as imagens devem ficar juntos. Não exige instalação, compilação ou banco de dados. Configure o domínio e HTTPS conforme as orientações da sua hospedagem.
 
-site/index.html — página e textos, logotipo, contatos e estrutura.
-site/style.css — cores, fontes, espaçamentos e layout responsivo.
-site/app.js — produtos, busca, filtros, ordenação, detalhes e WhatsApp.
-site/*.webp e site/essenza-logo.png — imagens.
-FONTES-DAS-IMAGENS.md — procedência dos recursos visuais.
+Se você já personalizou sua cópia, faça backup e compare as alterações antes de substituir arquivos. Este ZIP contém a versão preparada nesta conversa; não altera automaticamente seu repositório GitHub.
 
-2. PUBLICAR NO SEU DOMÍNIO
+COMO EDITAR
+index.html: textos gerais, nome, contatos e estrutura.
+style.css: cores, aparência, posicionamento e responsividade.
+app.js: lista perfumes, fotos, descrições, filtros e contato.
+WHATSAPP_NUMBER está configurado para 5562999883730. Atualize também os telefones visíveis em index.html se mudar de número.
 
-O domínio é o endereço. Você também precisa de uma hospedagem que sirva arquivos estáticos.
+PREÇOS E VOLUMES
+Os 11 novos itens estão com price: null, exibido como Consulte o preço. Para cadastrar um valor real, use número com ponto decimal, ex.: price: 249.90. Os quatro produtos anteriores mantêm preços ilustrativos.
+volume: null omite a informação não confirmada. Cadastre o volume real, ex.: volume: '100 ml'. Produtos antigos sem esse campo usam 100 ml.
 
-A) Extraia este ZIP.
-B) No painel da sua hospedagem, abra a pasta pública correspondente ao domínio. Em muitos serviços ela se chama public_html; use a pasta informada pelo provedor.
-C) Envie TODO O CONTEÚDO da pasta site para essa pasta pública. O arquivo index.html deve ficar diretamente na raiz pública, ao lado de app.js, style.css e todas as imagens. Não envie apenas o ZIP e não coloque a pasta site inteira dentro de outra pasta se quiser o catálogo na raiz do domínio.
-D) Associe o domínio à hospedagem e configure o DNS usando exatamente os registros fornecidos por ela.
-E) Ative o certificado HTTPS no painel da hospedagem.
-F) Abra seu domínio e confira a busca, os filtros, as fotos e os links de contato no celular e no computador.
+FOTOS
+Todas as fotos estão incluídas. Fontes e referências em FONTES-E-REFERENCIAS.md. Fotos de terceiros mantêm os direitos dos titulares; para divulgação comercial use fotos autorizadas da loja. O logotipo é o recorte da referência fornecida; pode ser substituído pelo arquivo original da marca.
 
-Se já houver outro site na hospedagem, faça uma cópia de segurança antes de substituir os arquivos. Arquivos novos com nomes iguais podem sobrescrever o site antigo.
+CONTATO
+O botão flutuante fica fixo no canto inferior direito ao rolar. O botão de interesse do produto abre o WhatsApp com seu nome. O cliente ainda precisa enviar a mensagem.
 
-Em uma hospedagem específica para sites estáticos, publique a pasta site como diretório público. Este projeto não tem etapa de build.
+LIMITAÇÕES
+Catálogo estático, sem painel administrativo, estoque automático, carrinho ou pagamento. Fontes tipográficas carregadas do Google Fonts, com alternativas locais se indisponível. Busca e filtros não dependem do ChatGPT.
 
-3. VISUALIZAR NO COMPUTADOR
-
-Você pode abrir site/index.html no navegador para conferir o visual. Para visualizar em um servidor local, com Python instalado, abra o terminal dentro da pasta site e execute:
-
-python -m http.server 8000
-
-Depois abra http://localhost:8000 no navegador. Encerre com Ctrl+C.
-
-4. EDITAR OS PRODUTOS
-
-Abra site/app.js em um editor de código. A lista perfumes contém os produtos. Cada item possui:
-id: identificador numérico único;
-name: nome do perfume;
-brand: marca;
-gender: Feminino, Masculino ou Unissex;
-family: descrição curta do perfil;
-price: preço numérico, usando ponto decimal (ex.: 219.90);
-image: nome da imagem, que deve existir na pasta site;
-badge: etiqueta do produto;
-description: descrição completa;
-notes: perfil olfativo.
-
-Preserve as vírgulas e aspas do JavaScript. Para adicionar um perfume, copie um item, escolha um id diferente e inclua a imagem correspondente. Os volumes são exibidos como 100 ml no template; se seus produtos tiverem outros volumes, adapte esses textos em app.js.
-
-Os quatro produtos e os preços atuais são demonstrativos. Substitua pelos dados reais e remova os avisos de demonstração em index.html e app.js somente depois de conferir tudo.
-
-5. CONTATOS E IDENTIDADE
-
-WhatsApp configurado em app.js:
-const WHATSAPP_NUMBER = '5562999883730';
-
-Formato: país + DDD + número, somente dígitos. O botão abre o WhatsApp com uma mensagem preparada; o cliente ainda precisa enviá-la.
-
-Se trocar o telefone, atualize também o número visível e o link tel: em index.html. Instagram, cidade, nome e demais textos estão em index.html.
-
-As cores principais estão nas variáveis --wine e --gold em style.css. O logotipo foi extraído da captura fornecida; para melhor resolução, substitua essenza-logo.png por um arquivo original da marca, preservando o nome ou atualizando as referências.
-
-6. LIMITAÇÕES DO TEMPLATE
-
-É um catálogo estático. Não inclui painel administrativo, cadastro de usuários, sincronização de estoque, carrinho, checkout ou pagamentos. As alterações são feitas no código e depois os arquivos atualizados são enviados à hospedagem.
-
-As fontes são carregadas do Google Fonts; se esse serviço estiver indisponível, o navegador usa as fontes alternativas definidas no CSS. Fotos e logotipo estão incluídos localmente.
-
-A integração opcional WebMCP só registra uma ferramenta de busca se o navegador oferecer suporte; ela não exige o ChatGPT e a busca visual funciona independentemente dela.
-
-7. IMAGENS
-
-Use fotos autorizadas da loja antes da divulgação comercial. Consulte FONTES-DAS-IMAGENS.md. O pacote não concede direitos sobre fotos de terceiros ou marcas.
+VISUALIZAR LOCALMENTE
+Abra site/index.html no navegador. Para servidor local com Python instalado, no terminal dentro de site execute: python -m http.server 8000. Abra http://localhost:8000 e encerre com Ctrl+C.

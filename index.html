@@ -15,15 +15,11 @@
 <body>
     <div class="announcement">São Miguel do Araguaia · Goiás <span>Atendimento pelo WhatsApp: (62) 99988-3730</span>
     </div>
-    <header>
-        <a class="logo" href="#" aria-label="Essenza de Sumara — início"><img src="essenza-logo.png"
+    <header><a class="logo" href="#" aria-label="Essenza de Sumara — início"><img src="essenza-logo.png"
                 alt="Essenza de Sumara" width="397" height="394"></a>
-        <nav aria-label="Principal">
-            <a href="#catalogo">Catálogo</a>
-            <a href="#essencia">Nossa essência</a>
-            <a href="#contato">Contato</a>
-        </nav>
-        <button class="outline contact">Fale com a Essenza <span>↗</span></button>
+        <nav aria-label="Principal"><a href="#catalogo">Catálogo</a><a href="#essencia">Nossa essência</a><a
+                href="#contato">Contato</a></nav><button class="outline contact">Fale com a Essenza
+            <span>↗</span></button>
     </header>
     <main>
         <section class="hero">
@@ -31,64 +27,48 @@
                 <p class="eyebrow">FRAGRÂNCIAS QUE DEIXAM HISTÓRIAS</p>
                 <h1>O Oriente.<br>Na sua <em>pele.</em></h1>
                 <p>Descubra a intensidade do oud, a delicadeza das flores e o calor do âmbar. Encontre uma fragrância
-                    que fale por você.</p>
-                <a class="gold-button" href="#catalogo">Explore o catálogo <span>↓</span></a>
-                <div class="hero-note">
-                    <span>01 —</span> Uma experiência além do perfume
-                </div>
+                    que fale por você.</p><a class="gold-button" href="#catalogo">Explore o catálogo <span>↓</span></a>
+                <div class="hero-note"><span>01 —</span> Uma experiência além do perfume</div>
             </div>
-            <div class="hero-art">
-                <img src="hero.webp" alt="Frasco de perfume âmbar com tampa dourada e madeira de oud"
-                    fetchpriority="high"><span class="image-caption">INTENSIDADE. MISTÉRIO. PRESENÇA.</span>
-            </div>
+            <div class="hero-art"><img src="hero.webp" alt="Frasco de perfume âmbar com tampa dourada e madeira de oud"
+                    fetchpriority="high"><span class="image-caption">INTENSIDADE. MISTÉRIO. PRESENÇA.</span></div>
         </section>
-        <div class="values">
-            <span>✧ &nbsp; A riqueza da perfumaria oriental</span>
-            <span>✧ &nbsp; Fragrâncias para cada personalidade</span>
-            <span>✧ &nbsp; Atendimento próximo e pessoal</span>
-        </div>
+        <div class="values"><span>✧ &nbsp; A riqueza da perfumaria oriental</span><span>✧ &nbsp; Fragrâncias para cada
+                personalidade</span><span>✧ &nbsp; Atendimento próximo e pessoal</span></div>
         <section id="catalogo" class="catalog">
             <div class="section-head">
                 <div>
                     <p class="eyebrow">ENCONTRE SUA ASSINATURA</p>
                     <h2>Uma coleção de sensações.</h2>
-                </div>
-                <label class="search">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                </div><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
                         <circle cx="10.5" cy="10.5" r="6.5" />
                         <path d="m16 16 5 5" />
-                    </svg>
-                    <input id="search" type="search" placeholder="Busque seu perfume" aria-label="Buscar perfume">
-                </label>
+                    </svg><input id="search" type="search" placeholder="Busque seu perfume"
+                        aria-label="Buscar perfume"></label>
             </div>
             <div class="filters">
-                <div role="group" aria-label="Filtrar por público" id="filters">
-                    <button class="active" data-filter="Todos" aria-pressed="true">Todos</button>
-                    <button data-filter="Feminino" aria-pressed="false">Femininos</button>
-                    <button data-filter="Masculino" aria-pressed="false">Masculinos</button>
-                    <button data-filter="Unissex" aria-pressed="false">Unissex</button>
-                </div>
-                <label class="sort">Ordenar por
-                    <select id="sort" aria-label="Ordenar perfumes">
+                <div role="group" aria-label="Filtrar por público" id="filters"><button class="active"
+                        data-filter="Todos" aria-pressed="true">Todos</button><button data-filter="Feminino"
+                        aria-pressed="false">Femininos</button><button data-filter="Masculino"
+                        aria-pressed="false">Masculinos</button><button data-filter="Unissex"
+                        aria-pressed="false">Unissex</button></div><label class="sort">Ordenar por <select id="sort"
+                        aria-label="Ordenar perfumes">
                         <option value="featured">Destaques</option>
                         <option value="asc">Menor preço</option>
                         <option value="desc">Maior preço</option>
                         <option value="name">Nome A–Z</option>
-                    </select>
-                </label>
+                    </select></label>
             </div>
-            <div class="results">
-                <span id="count" aria-live="polite"></span>
-                <span>Preços demonstrativos</span>
-            </div>
+            <div class="results"><span id="count" aria-live="polite"></span><span>Valores ilustrativos ou sob
+                    consulta</span></div>
             <div id="products" class="products"></div>
             <div id="empty" hidden>
                 <h3>Nenhuma fragrância encontrada</h3>
-                <p>Tente outro nome ou escolha uma categoria diferente.</p>
-                <button id="reset" class="outline">Limpar filtros</button>
+                <p>Tente outro nome ou escolha uma categoria diferente.</p><button id="reset" class="outline">Limpar
+                    filtros</button>
             </div>
         </section>
-
         <section id="essencia" class="essence">
             <div>
                 <p class="eyebrow">ESSENZA DE SUMARA</p>

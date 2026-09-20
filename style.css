@@ -1175,3 +1175,25 @@ footer {
         padding-bottom: 96px
     }
 }
+
+.product {
+    display: flex;
+    flex-direction: column
+}
+
+.product .price {
+    margin-top: auto
+}
+
+.product h3 {
+    overflow-wrap: anywhere
+}
+
+.product .product-meta {
+    flex-wrap: wrap;
+    gap: 6px
+}
+
+.product .notes {
+    margin-bottom: 17px
+}
